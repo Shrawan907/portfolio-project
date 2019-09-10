@@ -25,7 +25,7 @@ SECRET_KEY = '#agy#1(j8d5$bd6%d20#6$51bpvygi1v5r1^y5$-gmll2wa(l-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.43.98','localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfoliodb',
-        'PASSWORD': '9460202698',
+        'PASSWORD': 'django240457',
         'USER': 'postgres',
         'HOST': 'localhost',
         'PORT': '5432'
