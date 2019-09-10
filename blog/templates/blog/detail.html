@@ -1,0 +1,108 @@
+<!--{ detailblog.title }}       -->
+
+<!--  whole page is pasted from bootstrap example
+      in line 13 i pasted a link
+      in header section everything is pasted from navbar in documentation in bootstrap
+      1. in line 41 i changed navbar-light bg-light to navbar-dark bg-dark
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Album example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   
+     
+  </head>
+
+
+
+
+
+
+  <body>
+  
+
+<div class="bg-dark">
+
+
+
+
+    <div class="container bg-dark">
+
+      <h1 class="text-white text-center">  {{ detailblog.title }}   </h1>
+        
+    </div>
+
+
+
+    <div class="container ">
+
+       
+
+  
+     
+
+      
+
+               
+                 <p class="text-center text-white">{{detailblog.date}}</p>    
+                 <img class="card-img-top image-fluid" src=" {{ detailblog.image.url }} " height="470" width="200"  />  
+                  <br/>
+                  <br/>
+                 
+
+                <p class="text-success">  {{ detailblog.body}}   </p>
+                <br>
+    </div>
+             
+
+            
+    
+   
+
+        
+
+
+      
+
+
+    
+</div>
+
+
+
+<footer class="text-white bg-dark">
+  <div class="container text-center">
+
+     <!--      this is we don't want so
+
+    <p class="float-right">
+
+
+
+      <a href="#">Back to top</a>            look at it
+    </p>
+    <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.3/getting-started/introduction/">getting started guide</a>.</p>
+      -->
+        <!-- for emoji window + semicolon  -->
+      <p> ©Shrawan Choudhary {% now "Y" %} </p>
+  </div>
+</footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</div>
+    </body>
+</html>

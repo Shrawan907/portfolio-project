@@ -6,7 +6,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {% load staticfiles %}  <!--       static files               -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -55,7 +54,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
     <!--  a tag take us to the home page again-->
-  <a class="navbar-brand" href="{% url 'home' %}">     Shrawan Choudhary     </a>
+  <a class="navbar-brand" href="#">     Shrawan Choudhary     </a>
 
     <!-- here are lots of button and we do not made any change in them-->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,13 +68,13 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item" >
-        <a class="nav-link" href="https://facebook.com">FaceBook</a>
+        <a class="nav-link" href="#">Twitter</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% static 'abstract.pdf' %}">Resume</a>
+        <a class="nav-link" href="#">Resume</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
+        <a class="nav-link active" href="#" >Blog</a>
       </li>
 
     </ul>
@@ -83,58 +82,51 @@
 </nav>
 </header>
 
-
-
+<div class="bg-dark">
 
 <main role="main">
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">    Hi, I am Shrawan      </h1>
-      <p class="lead text-muted">So friends here i am going to tell you that after so much numbers i am adding one more number hahaha i mean by a girl so there is one more girl added to my like list. Her name is Vidhusi, she is in my batch and i like her, yes. Or you can say she is my new crush. </p>
-      <p>
-
-
-
-        <!-- here i write mailto:____________  this open default browser for mail -->
-        <a href="mailto:shrawan07090@gmail.com" class="btn btn-primary my-2">  Email me  </a>
-          <br/>
-
-        <img src="{% static 'my1.jpg' %}" height="300" width="460"/>
-
-      </p>
+      <h1 class="jumbotron-heading">   Welcome to Shrawan's Blog    </h1>
+        
     </div>
   </section>
 
-  <div class="album py-5 bg-light">
-    <div class="container">
+    <hr>
 
+  <div class="album py-5 " style="background: darkslategray">
+    <div class="container ">
 
+        <h1 class="bg-primary text-warning "> Latest Post</h1>
 
-      <div class="row">
+        <hr>
+     
+    {% for b in bt.all %}
+            
+        <div class="col-md-8">
 
-      {% for job in jobs.all %}
+            <div class="card mb-4 box-shadow">
 
-        <div class="col-md-4">
-
-          <div class="card mb-4 box-shadow">
-
-                      <div class="change">
-            <img class="card-img-top" src=" {{ job.image.url }} "  />
-                    </div>
-                      <div class="change2">
-            <div class="card-body">
-              <p class="card-text">  {{ job.summary  }}   </p>
+                                  <!-- notice the url -->
+                <a href="{% url 'detail' b.id %}">  <h5>{{b.title}}</h5>  </a>
+                <p>{{b.date}}</p>    
+                <a href="{{b.image.url}}">  <img class="card-img-top image-fluid" src=" {{ b.image.url }} "  />  </a>
+                                        <!-- <img class="img-fluid" src="" height=500 width=900 > -->
+                <div class="card-body">
+                    <p class="card-text">  {{ b.summary }}   </p>
+                </div>
+            
             </div>
-                      </div>
-          </div>
 
         </div>
+        <br>
+        <hr>
 
-        {% endfor %}
+        
+    {% endfor %}
 
-      </div>
-
+      
 
 
     </div>
@@ -142,7 +134,7 @@
 
 </main>
 
-<footer class="text-muted">
+<footer class="text-white bg-dark">
   <div class="container text-center">
 
      <!--      this is we don't want so
@@ -164,5 +156,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+</div>
     </body>
 </html>
